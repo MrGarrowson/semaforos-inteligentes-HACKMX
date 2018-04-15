@@ -139,6 +139,7 @@ function drawPeople(){
 			fill(255, 51, 204);
 			ellipse (street_height/2 - 20,street_height/2 +40 ,10,15);
 		}
+		
 		if(npeople === 2){
 			fill(255, 51, 204);
 			ellipse (street_height/2 - 20,street_height/2 +40 ,10,15);
