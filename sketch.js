@@ -60,6 +60,7 @@ function draw() {
 	// Calles
 	drawStreets();
 	//semaforos
+	noStroke();
 	line(street_height/2, 0, street_height/2, height);
 	// Coches
 	//xstreetlight.display();
@@ -137,22 +138,45 @@ function drawPeople(){
 	if(light!==1){
 		if(npeople === 1){
 			fill(255, 51, 204);
-			ellipse (street_height/2 - 20,street_height/2 +40 ,10,15);
+			ellipse (street_height/2 - 20,street_height/2 +40-nh ,10,15);
+			console.log(nh)
 		}
-		
 		if(npeople === 2){
 			fill(255, 51, 204);
-			ellipse (street_height/2 - 20,street_height/2 +40 ,10,15);
+			ellipse (street_height/2 - 20,street_height/2 +40-nh ,10,15);
 			fill(249, 55, 196);
-			ellipse (street_height/2 - 30,street_height/2 +40 ,10,15);
+			ellipse (street_height/2 - 30,street_height/2 +40-nh ,10,15);
 		}
 		if(npeople === 3){
 			fill(255, 51, 204);
-			ellipse (street_height/2 - 20,street_height/2 +40 ,10,15);
+			ellipse (street_height/2 - 20,street_height/2 +40-nh ,10,15);
 			fill(249, 55, 196);
-			ellipse (street_height/2 - 30,street_height/2 +40 ,10,15);
+			ellipse (street_height/2 - 30,street_height/2 +40-nh ,10,15);
 			fill(260, 50, 201);
-			ellipse (street_height/2 - 40,street_height/2 +40 ,10,15);
+			ellipse (street_height/2 - 40,street_height/2 +40-nh ,10,15);
+		}
+	}
+
+	if(light===1){
+		nh+=0.1;
+		if(npeople === 1){
+			fill(255, 51, 204);
+			ellipse (street_height/2 - 20,street_height/2 +40-nh ,10,15);
+			console.log(nh)
+		}
+		if(npeople === 2){
+			fill(255, 51, 204);
+			ellipse (street_height/2 - 20,street_height/2 +40-nh ,10,15);
+			fill(249, 55, 196);
+			ellipse (street_height/2 - 30,street_height/2 +40-nh ,10,15);
+		}
+		if(npeople === 3){
+			fill(255, 51, 204);
+			ellipse (street_height/2 - 20,street_height/2 +40-nh ,10,15);
+			fill(249, 55, 196);
+			ellipse (street_height/2 - 30,street_height/2 +40-nh ,10,15);
+			fill(260, 50, 201);
+			ellipse (street_height/2 - 40,street_height/2 +40-nh ,10,15);
 		}
 	}
 }
